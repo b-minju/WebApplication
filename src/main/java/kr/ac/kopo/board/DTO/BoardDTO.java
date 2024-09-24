@@ -1,6 +1,7 @@
 package kr.ac.kopo.board.DTO;
 
 import lombok.*;
+
 import java.time.LocalDateTime;
 
 @Data

@@ -7,13 +7,18 @@ import kr.ac.kopo.board.entity.Board;
 import kr.ac.kopo.board.entity.Member;
 
 public interface BoardService {
-    // 새 글을 등록하는 기능
+//    새글을 등록하는 기능
     Long register(BoardDTO dto);
-
-    // 게시목록 처리 기능
+//    게시목록 처리 기능
     PageResultDTO<BoardDTO, Object[]> getList(PageRequestDTO pageRequestDTO);
 
-    // Entity를 DTO로
+//    특정 번호 게시물을 조회
+    BoardDTO get(Long bno);
+
+//    특정 번호 게시물 삭제
+    void removeWithReplies(Long bno);
+
+//    Entity를 DTO로 변환하는 메소드
     default BoardDTO entityToDTO(Board board, Member member, Long replyCount){
         BoardDTO boardDTO = BoardDTO.builder()
                 .bno(board.getBno())
@@ -29,10 +34,13 @@ public interface BoardService {
         return boardDTO;
     }
 
-    // DTO를 Entity로
-    default Board dtoToEntity(BoardDTO dto) {
-        Member member = Member.builder().email(dto.getWriterEmail()).build();
-        Board board = Board.builder()
+//    DTO를 Entity로 변환하는 메소드(
+    default Board dtoToEntity(BoardDTO dto){
+        Member member = Member.builder()
+                .email(dto.getWriterEmail())
+                .build();
+
+        Board board=Board.builder()
                 .bno(dto.getBno())
                 .title(dto.getTitle())
                 .content(dto.getContent())
