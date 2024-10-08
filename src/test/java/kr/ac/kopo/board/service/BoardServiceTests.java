@@ -1,9 +1,9 @@
 package kr.ac.kopo.board.service;
 
 
-import kr.ac.kopo.board.DTO.BoardDTO;
-import kr.ac.kopo.board.DTO.PageRequestDTO;
-import kr.ac.kopo.board.DTO.PageResultDTO;
+import kr.ac.kopo.board.dto.BoardDTO;
+import kr.ac.kopo.board.dto.PageRequestDTO;
+import kr.ac.kopo.board.dto.PageResultDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

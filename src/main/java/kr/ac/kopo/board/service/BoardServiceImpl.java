@@ -1,8 +1,8 @@
 package kr.ac.kopo.board.service;
 
-import kr.ac.kopo.board.DTO.BoardDTO;
-import kr.ac.kopo.board.DTO.PageRequestDTO;
-import kr.ac.kopo.board.DTO.PageResultDTO;
+import kr.ac.kopo.board.dto.BoardDTO;
+import kr.ac.kopo.board.dto.PageRequestDTO;
+import kr.ac.kopo.board.dto.PageResultDTO;
 import kr.ac.kopo.board.entity.Board;
 import kr.ac.kopo.board.entity.Member;
 import kr.ac.kopo.board.repository.BoardRepository;

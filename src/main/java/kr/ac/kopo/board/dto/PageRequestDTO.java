@@ -1,4 +1,4 @@
-package kr.ac.kopo.board.DTO;
+package kr.ac.kopo.board.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
